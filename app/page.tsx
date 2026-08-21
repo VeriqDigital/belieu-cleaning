@@ -13,24 +13,12 @@ export default function Home() {
     <main>
       <Hero />
       <TrustStrip />
-      <Section id="about" tone="white">
-        <AboutIntro />
-      </Section>
-      <Section id="services" tone="blue">
-        <ServicesSection />
-      </Section>
-      <Section id="process" tone="cream">
-        <ProcessSection />
-      </Section>
-      <Section tone="white">
-        <ContactCtaSection />
-      </Section>
-      <Section id="service-area" tone="blue">
-        <LocationSection />
-      </Section>
-      <Section id="faq" tone="cream">
-        <FAQ />
-      </Section>
+      <Section id="about" tone="cream"><AboutIntro /></Section>
+      <Section id="services" tone="white"><ServicesSection /></Section>
+      <Section id="process" tone="dark"><ProcessSection /></Section>
+      <Section tone="cream"><ContactCtaSection /></Section>
+      <Section id="service-area" tone="blue"><LocationSection /></Section>
+      <Section id="faq" tone="white"><FAQ /></Section>
     </main>
   );
 }

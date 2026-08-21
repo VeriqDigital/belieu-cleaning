@@ -3,7 +3,7 @@ import Container from "./Container";
 type SectionProps = {
   children: React.ReactNode;
   id?: string;
-  tone?: "cream" | "white" | "blue";
+  tone?: "cream" | "white" | "blue" | "dark";
   className?: string;
 };
 
@@ -17,6 +17,7 @@ const Section = ({
     cream: "bg-(--background)",
     white: "bg-white",
     blue: "bg-(--surface-soft)",
+    dark: "bg-(--ink)",
   };
 
   return (

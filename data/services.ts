@@ -1,44 +1,73 @@
-export const services = [
+export const primaryServices = [
   {
     title: "Regular House Cleaning",
+    shortTitle: "Regular Cleaning",
     description:
-      "Dependable recurring cleaning to help keep kitchens, bathrooms, bedrooms, living areas, and shared spaces fresh and comfortable.",
-    image: "/house-cleaning.png",
-    alt: "Warm residential kitchen with a clean counter and neatly folded blue cloths",
-  },
-  {
-    title: "Apartment Cleaning",
-    description:
-      "Detail-oriented cleaning for apartments and condos, with the scope tailored to your space, schedule, and priorities.",
-    image: "/apartment-cleaning.png",
-    alt: "Bright, tidy apartment living room with an open kitchen",
+      "Routine care for the kitchens, bathrooms, bedrooms, and living spaces that keep a home feeling good day to day.",
+    image: "/livingroom.jpg",
+    alt: "Freshly cleaned living room arranged with care",
   },
   {
     title: "Deep Cleaning",
+    shortTitle: "Deep Cleaning",
     description:
-      "More detailed cleaning for spaces that need extra attention, seasonal resets, or a more thorough refresh.",
-    image: "/house-cleaning.png",
-    alt: "Fresh residential kitchen prepared for a detailed cleaning",
+      "A more detailed reset for homes that need extra time and attention, whether things have piled up or it is simply time for a thorough clean.",
+    image: "/kitchen.jpg",
+    alt: "Clean kitchen counters with a polished finish",
   },
   {
     title: "Move-In / Move-Out Cleaning",
+    shortTitle: "Moving Cleans",
     description:
-      "Cleaning for empty or transitioning homes and apartments before moving in, after moving out, or between occupants.",
-    image: "/apartment-cleaning.png",
-    alt: "Clean apartment interior ready for a move or new occupant",
+      "Cleaning for homes in transition, helping you leave a space ready for what comes next or start fresh in a new one.",
+    image: "/clean_room.jpg",
+    alt: "Empty room with freshly cleaned floors",
   },
   {
-    title: "Camper & RV Cleaning",
+    title: "Airbnb & Short-Term Rental Cleaning",
+    shortTitle: "Airbnb Cleaning",
     description:
-      "Detailed interior cleaning for campers and RVs so they are ready for trips, guests, storage, or a new season.",
-    image: "/camper-rv-cleaning.png",
-    alt: "Freshly cleaned camper interior with a tidy dinette and sleeping area",
+      "Dependable cleaning between guests to help short-term rentals feel fresh, orderly, and ready for the next arrival.",
+    image: "/bedroom.jpg",
+    alt: "Clean bedroom prepared with neatly arranged bedding",
   },
   {
-    title: "Custom Cleaning Requests",
+    title: "Construction Cleaning",
+    shortTitle: "Construction Cleaning",
     description:
-      "Have a particular space or priority in mind? Share the details with Domenica so she can confirm the scope and prepare a quote.",
-    image: "/house-cleaning.png",
-    alt: "Clean, comfortable home interior with thoughtful finishing details",
+      "Post-project cleanup for spaces that need dust, debris, and the final layer of mess handled before they are ready to use.",
+    image: "/clean_floor.jpg",
+    alt: "Freshly cleaned hardwood floor after detailed work",
+  },
+  {
+    title: "Commercial Cleaning & Resets",
+    shortTitle: "Commercial Cleaning",
+    description:
+      "Practical cleaning and reset help for local businesses and commercial spaces, planned around the needs of the job.",
+    image: "/kitchen2.jpg",
+    alt: "Bright polished interior after a professional cleaning",
   },
 ] as const;
+
+export const additionalServices = [
+  {
+    title: "Junk Removal",
+    description: "Help clearing unwanted items when a space needs more than surface cleaning.",
+  },
+  {
+    title: "Decluttering & Organizing",
+    description: "Hands-on help creating breathing room and getting everyday spaces back in order.",
+  },
+  {
+    title: "Water Cleanup",
+    description: "Flooded basement and water-cleanup help. Call to discuss the situation and scope.",
+  },
+  {
+    title: "Dog Walking & Potty Breaks",
+    description: "An extra helping hand for dogs when your schedule gets busy.",
+  },
+] as const;
+
+export const frequencyOptions = ["One-time", "Weekly", "Biweekly", "Monthly"] as const;
+
+export const services = primaryServices;

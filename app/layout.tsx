@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Nunito_Sans } from "next/font/google";
+import { Manrope, Playfair_Display } from "next/font/google";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import ScrollToTop from "@/components/layout/ScrollToTop";
@@ -11,15 +11,16 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
-const nunitoSans = Nunito_Sans({
-  variable: "--font-nunito-sans",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
   subsets: ["latin"],
 });
 
 const defaultTitle =
-  "Domenica’s Cleaning | Residential, Move & RV Cleaning in Wisconsin";
+  "Belieu's Signature Cleaning Services | Des Moines, Iowa";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: {
     default: defaultTitle,
     template: `%s | ${siteConfig.name}`,
@@ -27,13 +28,11 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: [
-    "house cleaning Wisconsin",
-    "apartment cleaning Wisconsin",
-    "deep cleaning Wisconsin",
-    "move-in move-out cleaning Wisconsin",
-    "camper cleaning Wisconsin",
-    "RV cleaning Wisconsin",
-    "local cleaning service",
+    "cleaning services Des Moines",
+    "house cleaning Des Moines",
+    "deep cleaning Des Moines",
+    "move-out cleaning Des Moines",
+    "commercial cleaning Des Moines",
   ],
   robots: {
     index: true,
@@ -45,11 +44,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     locale: siteConfig.locale,
     type: "website",
+    images: [{ url: "/og.png", width: 1728, height: 909, alt: "Belieu's Signature Cleaning Services - No judgment. Just a clean, fresh start." }],
   },
   twitter: {
-    card: "summary",
-    title: "Domenica’s Cleaning | Local Wisconsin Cleaning Service",
+    card: "summary_large_image",
+    title: "Belieu's Signature Cleaning Services | Des Moines",
     description: siteConfig.description,
+    images: ["/og.png"],
   },
 };
 
@@ -65,11 +66,11 @@ const localBusinessSchema = {
   },
   makesOffer: [
     "Regular house cleaning",
-    "Apartment cleaning",
     "Deep cleaning",
     "Move-in and move-out cleaning",
-    "Camper and RV cleaning",
-    "Custom cleaning requests",
+    "Airbnb and short-term rental cleaning",
+    "Construction cleaning",
+    "Commercial cleaning",
   ].map((name) => ({
     "@type": "Offer",
     itemOffered: { "@type": "Service", name },
@@ -84,7 +85,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${nunitoSans.variable} h-full antialiased`}
+      className={`${manrope.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <script

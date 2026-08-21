@@ -24,7 +24,7 @@ export const faqs = [
   {
     question: "Do you provide commercial cleaning?",
     answer:
-      "Yes. Belieu's offers commercial cleaning and resets. Because every space is different, the scope is discussed before a quote is prepared.",
+      "Yes. Belieu's offers commercial cleaning and resets. Because every space is different, call or text to talk through the scope and timing.",
   },
   {
     question: "Can you help with organizing or junk removal?",
@@ -37,8 +37,8 @@ export const faqs = [
       "Yes. One-time cleaning is available for customers who need a single reset without setting up recurring service.",
   },
   {
-    question: "How do I get a quote?",
-    answer: `Call or text ${siteConfig.contact.phone}, email ${siteConfig.contact.email}, or use the quote form to share the type of space and what you need help with.`,
+    question: "How do I get started?",
+    answer: `Call or text ${siteConfig.contact.phone}, or email ${siteConfig.contact.email}. Share the type of space and what you need help with, and Belieu's will talk through the job with you.`,
   },
   {
     question: "Are you insured?",

@@ -1,11 +1,11 @@
 const steps = [
   {
-    title: "Tell Us What You Need",
-    description: "Call, text, or send the basics about your space and the kind of help you are looking for.",
+    title: "Start With a Conversation",
+    description: "Call or text with the basics about your space and the kind of help you are looking for.",
   },
   {
-    title: "Get Your Personalized Plan",
-    description: "We will talk through the scope, timing, and priorities before confirming your quote.",
+    title: "Talk Through the Details",
+    description: "We will discuss the scope, timing, and priorities, then confirm service and availability with you.",
   },
   {
     title: "Come Home to Clean",

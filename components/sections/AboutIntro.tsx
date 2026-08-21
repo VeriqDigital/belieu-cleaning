@@ -57,7 +57,7 @@ const AboutIntro = ({ headingAs = "h2" }: AboutIntroProps) => {
             </div>
           </div>
           <div className="mt-9 flex flex-col gap-3 min-[430px]:flex-row lg:flex-col xl:flex-row">
-            <Button href={siteConfig.contact.phoneHref}>Call / Text for a Quote</Button>
+            <Button href={siteConfig.contact.phoneHref}>Call / Text {siteConfig.contact.phone}</Button>
             <Button href="/about" variant="dark">About Belieu&apos;s</Button>
           </div>
         </div>

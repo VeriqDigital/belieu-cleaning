@@ -6,8 +6,8 @@ import Section from "@/components/ui/Section";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Contact & Get a Cleaning Quote",
-  description: "Call or text Belieu's Signature Cleaning Services for a personalized cleaning quote in the Des Moines metro and Central Iowa.",
+  title: "Contact Belieu's Signature Cleaning Services",
+  description: "Call, text, or email Belieu's Signature Cleaning Services about cleaning in the Des Moines metro and Central Iowa.",
 };
 
 export default function ContactPage() {
@@ -23,10 +23,11 @@ export default function ContactPage() {
             <p className="text-lg leading-8 text-white/65">Tell us the kind of space, what needs attention, and the general location. We&apos;ll talk through the job and next steps with you.</p>
             <a href={siteConfig.contact.phoneHref} className="mt-6 block font-display text-4xl font-semibold text-white hover:text-(--pink)">{siteConfig.contact.phone}</a>
             <div className="mt-6 flex flex-wrap gap-3"><Button href={siteConfig.contact.phoneHref}>Call Now</Button><Button href={siteConfig.contact.smsHref} variant="dark">Send a Text</Button></div>
+            <a href={siteConfig.contact.emailHref} className="mt-6 block break-all text-base font-bold text-white underline decoration-(--pink) decoration-2 underline-offset-4 hover:text-(--pink)">{siteConfig.contact.email}</a>
           </div>
         </div>
       </Section>
-      <Section tone="cream"><ContactCtaSection /></Section>
+      <Section tone="cream"><ContactCtaSection onContactPage /></Section>
       <Section tone="blue"><LocationSection /></Section>
     </main>
   );

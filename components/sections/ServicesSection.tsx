@@ -33,11 +33,14 @@ const ServicesSection = ({ showAll = false, headingAs = "h2" }: ServicesSectionP
           <Image src={featured.image} alt={featured.alt} fill className="object-cover transition duration-700 group-hover:scale-[1.025]" sizes="(max-width: 1023px) calc(100vw - 2rem), 650px" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-9">
-            <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-(--gold)">The everyday essential</p>
+            <div className="flex items-center gap-4">
+              <span className="font-display text-2xl italic text-(--pink)">01</span>
+              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-(--gold)">The everyday essential</p>
+            </div>
             <h3 className="mt-3 font-display text-4xl font-medium sm:text-5xl">{featured.title}</h3>
             <p className="mt-4 max-w-xl leading-7 text-white/75">{featured.description}</p>
             <a href={siteConfig.contact.phoneHref} className="mt-6 inline-flex min-h-11 items-center gap-2 font-bold text-white underline decoration-(--pink) decoration-2 underline-offset-4 hover:text-(--pink-soft)">
-              Call / Text for a quote <ArrowIcon className="size-4" />
+              Call / Text to talk through the job <ArrowIcon className="size-4" />
             </a>
           </div>
         </article>

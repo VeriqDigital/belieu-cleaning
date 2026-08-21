@@ -1,13 +1,11 @@
-"use client";
-
 import Button from "@/components/ui/Button";
-import LeadModal from "@/components/layout/LeadModal";
-import useLeadModal from "@/components/layout/useLeadModal";
-import { primaryCta, siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/site";
 
-const ContactCtaSection = () => {
-  const modal = useLeadModal();
+type ContactCtaSectionProps = {
+  onContactPage?: boolean;
+};
 
+const ContactCtaSection = ({ onContactPage = false }: ContactCtaSectionProps) => {
   return (
     <div className="relative overflow-hidden bg-(--pink) text-white">
       <div aria-hidden="true" className="absolute -right-24 -top-24 size-72 rounded-full border-[40px] border-white/8" />
@@ -29,7 +27,9 @@ const ContactCtaSection = () => {
           </a>
           <div className="mt-8 flex flex-col gap-3">
             <Button href={siteConfig.contact.phoneHref}>Call / Text Now</Button>
-            <Button onClick={() => modal.openModal(primaryCta.modal)} variant="dark">Use the Quote Form</Button>
+            <Button href={onContactPage ? siteConfig.contact.smsHref : "/contact"} variant="dark">
+              {onContactPage ? "Send a Text" : "Contact Belieu's"}
+            </Button>
           </div>
           <a href={siteConfig.contact.emailHref} className="mt-6 break-all text-sm font-bold text-white/65 underline decoration-(--pink) decoration-2 underline-offset-4 hover:text-white">
             {siteConfig.contact.email}
@@ -37,16 +37,6 @@ const ContactCtaSection = () => {
         </div>
       </div>
 
-      {modal.activeModal && (
-        <LeadModal
-          activeModal={modal.activeModal}
-          hasSubmitted={modal.hasSubmitted}
-          isSubmitting={modal.isSubmitting}
-          onClose={modal.closeModal}
-          onSubmit={modal.handleFormSubmit}
-          submitError={modal.submitError}
-        />
-      )}
     </div>
   );
 };

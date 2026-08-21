@@ -32,13 +32,11 @@ const Navbar = () => {
         <span className="hidden lg:block"><BrandMark /></span>
 
         <nav aria-label="Primary navigation" className="ml-auto hidden items-center gap-6 lg:flex xl:gap-8">
-          {navigation.map((item) =>
-            "href" in item ? (
-              <Link key={item.href} href={item.href} className="min-h-11 content-center whitespace-nowrap text-sm font-bold transition hover:text-(--pink)">
-                {item.label}
-              </Link>
-            ) : null,
-          )}
+          {navigation.map((item) => (
+            <Link key={item.href} href={item.href} className="min-h-11 content-center whitespace-nowrap text-sm font-bold transition hover:text-(--pink)">
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         <a
@@ -73,13 +71,11 @@ const Navbar = () => {
         <div id="mobile-navigation-menu" className="fixed inset-x-0 bottom-0 top-[6.75rem] z-50 bg-black/50 lg:hidden" onClick={() => setIsMenuOpen(false)}>
           <div className="border-t border-(--border) bg-white px-5 pb-7 pt-3 shadow-xl" onClick={(event) => event.stopPropagation()}>
             <nav aria-label="Mobile navigation" className="grid">
-              {navigation.map((item) =>
-                "href" in item ? (
-                  <Link key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className="min-h-13 content-center border-b border-(--border-warm) px-1 font-bold">
-                    {item.label}
-                  </Link>
-                ) : null,
-              )}
+              {navigation.map((item) => (
+                <Link key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className="min-h-13 content-center border-b border-(--border-warm) px-1 font-bold">
+                  {item.label}
+                </Link>
+              ))}
             </nav>
             <div className="mt-5 grid grid-cols-2 gap-3">
               <a href={siteConfig.contact.smsHref} className="min-h-12 content-center rounded-full border border-(--ink) text-center text-sm font-extrabold">Text Us</a>

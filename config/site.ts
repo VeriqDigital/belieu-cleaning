@@ -1,5 +1,3 @@
-import type { ModalType } from "@/components/layout/LeadModal";
-
 export const siteConfig = {
   name: "Belieu's Signature Cleaning Services",
   shortName: "Belieu's Signature Cleaning",
@@ -20,18 +18,9 @@ export const siteConfig = {
     email: "sbelieu12@gmail.com",
     emailHref: "mailto:sbelieu12@gmail.com",
   },
-  forms: {
-    // TODO: Connect form delivery before launch.
-    recipientEmail: "sbelieu12@gmail.com",
-    quoteSubject: "New cleaning quote request for Belieu's Signature Cleaning Services",
-    contactSubject: "New website message for Belieu's Signature Cleaning Services",
-    deliveryConfigured: false,
-  },
 } as const;
 
-export type NavItem =
-  | { label: string; href: string }
-  | { label: string; modal: ModalType };
+export type NavItem = { label: string; href: string };
 
 export const navigation: NavItem[] = [
   { label: "Services", href: "/#services" },
@@ -47,10 +36,4 @@ export const footerLinks: NavItem[] = [
   { label: "Service Area", href: "/#service-area" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/contact" },
-  { label: "Request a Quote", modal: "service" },
 ];
-
-export const primaryCta = {
-  label: "Get a Quote",
-  modal: "service",
-} as const satisfies { label: string; modal: ModalType };

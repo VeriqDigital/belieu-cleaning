@@ -3,10 +3,8 @@ import Link from "next/link";
 type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "dark" | "light";
-  href?: string;
+  href: string;
   newTab?: boolean;
-  onClick?: () => void;
-  type?: "button" | "submit";
   className?: string;
 };
 
@@ -15,8 +13,6 @@ const Button = ({
   variant = "primary",
   href,
   newTab,
-  onClick,
-  type = "button",
   className = "",
 }: ButtonProps) => {
   const baseClasses =
@@ -33,27 +29,15 @@ const Button = ({
       "border-white bg-white text-(--navy) shadow-[0_8px_20px_rgba(6,40,68,0.22)] hover:-translate-y-0.5 hover:border-(--blue-light) hover:bg-(--blue-light) hover:text-(--navy-deep)",
   };
 
-  if (href) {
-    return (
-      <Link
-        href={href}
-        target={newTab ? "_blank" : undefined}
-        rel={newTab ? "noopener noreferrer" : undefined}
-        className={`${baseClasses} ${variantClasses[variant]} ${className}`}
-      >
-        {children}
-      </Link>
-    );
-  }
-
   return (
-    <button
-      type={type}
-      onClick={onClick}
+    <Link
+      href={href}
+      target={newTab ? "_blank" : undefined}
+      rel={newTab ? "noopener noreferrer" : undefined}
       className={`${baseClasses} ${variantClasses[variant]} ${className}`}
     >
       {children}
-    </button>
+    </Link>
   );
 };
 

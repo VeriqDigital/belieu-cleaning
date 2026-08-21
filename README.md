@@ -21,7 +21,6 @@ npm run build
 
 ## Launch details still needed
 
-- A connected form-delivery service or backend endpoint
 - The final production domain for canonical and social metadata
 - A verified Facebook profile URL if social links should be added
 - Any exact city-by-city service boundaries

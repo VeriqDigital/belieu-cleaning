@@ -1,15 +1,9 @@
-"use client";
-
 import Link from "next/link";
 import BrandMark from "@/components/ui/BrandMark";
 import { footerLinks, siteConfig } from "@/config/site";
 import { services } from "@/data/services";
-import LeadModal from "./LeadModal";
-import useLeadModal from "./useLeadModal";
 
 const Footer = () => {
-  const modal = useLeadModal();
-
   return (
     <footer className="w-full bg-(--ink) text-white">
       <div className="mx-auto w-full max-w-(--container-width) px-5 py-14 sm:px-8 lg:px-10 lg:py-18">
@@ -39,7 +33,7 @@ const Footer = () => {
           <nav aria-label="Footer navigation">
             <h2 className="text-xs font-extrabold uppercase tracking-[0.18em] text-(--gold)">Explore</h2>
             <ul className="mt-4 grid gap-2 text-sm font-semibold text-white/60">
-              {footerLinks.map((link) => <li key={link.label}>{"href" in link ? <Link href={link.href} className="inline-flex min-h-9 items-center hover:text-white">{link.label}</Link> : <button type="button" onClick={() => modal.openModal(link.modal)} className="min-h-9 cursor-pointer text-left hover:text-white">{link.label}</button>}</li>)}
+              {footerLinks.map((link) => <li key={link.label}><Link href={link.href} className="inline-flex min-h-9 items-center hover:text-white">{link.label}</Link></li>)}
             </ul>
           </nav>
           <div>
@@ -55,14 +49,12 @@ const Footer = () => {
 
         <div className="border-t border-white/15 pt-6 text-xs leading-6 text-white/40 sm:flex sm:justify-between sm:gap-8">
           <div>
-            <p>Website demo. Online form delivery and final launch details must be confirmed before publishing to the business domain.</p>
+            <p>Website demo. Final launch details must be confirmed before publishing to the business domain.</p>
             <p className="mt-1">&copy; 2026 {siteConfig.name}. Iowa.</p>
           </div>
           <p className="mt-3 shrink-0 sm:mt-0">Website designed by <Link href="https://www.veriqdigital.com/" target="_blank" rel="noopener noreferrer" className="font-semibold text-white/60 hover:text-white">Veriq Digital</Link></p>
         </div>
       </div>
-
-      {modal.activeModal && <LeadModal activeModal={modal.activeModal} hasSubmitted={modal.hasSubmitted} isSubmitting={modal.isSubmitting} onClose={modal.closeModal} onSubmit={modal.handleFormSubmit} submitError={modal.submitError} />}
     </footer>
   );
 };

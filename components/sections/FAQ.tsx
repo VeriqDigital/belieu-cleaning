@@ -9,7 +9,7 @@ const FAQ = () => {
 
   return (
     <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
-      <div className="lg:sticky lg:top-36 lg:self-start">
+      <div>
         <p className="eyebrow">Good to know</p>
         <h2 className="mt-4 font-display text-[clamp(2.8rem,7vw,5.25rem)] font-medium leading-[0.92] tracking-[-0.04em] text-(--ink)">
           Questions before we get started?

@@ -8,15 +8,15 @@ import {
 } from "@/components/ui/Icons";
 
 const trustItems = [
-  { label: "Locally owned", detail: "Personal local service", Icon: HomeIcon },
-  { label: "Direct communication", detail: "Talk with Domenica", Icon: MessageIcon },
-  { label: "Reliable follow-up", detail: "Clear next steps", Icon: CalendarIcon },
+  { label: "Locally owned", detail: "Des Moines metro", Icon: HomeIcon },
+  { label: "Judgment-free", detail: "A fresh start", Icon: MessageIcon },
+  { label: "Reliable", detail: "Clear communication", Icon: CalendarIcon },
   { label: "Detail-oriented", detail: "Care for the little things", Icon: SparkleIcon },
-  { label: "Flexible options", detail: "Built around your space", Icon: HeartIcon },
+  { label: "Insured", detail: "Professional care", Icon: HeartIcon },
 ] as const;
 
 const TrustStrip = () => (
-  <section aria-label="Why choose Domenica’s Cleaning" className="border-y border-(--border) bg-white">
+  <section aria-label="Why choose Belieu's Signature Cleaning Services" className="border-y border-(--border) bg-white">
     <Container>
       <div className="grid min-[430px]:grid-cols-2 lg:grid-cols-5">
         {trustItems.map(({ label, detail, Icon }, index) => (

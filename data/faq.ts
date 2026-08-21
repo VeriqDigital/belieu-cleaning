@@ -1,52 +1,52 @@
+import { siteConfig } from "@/config/site";
+
 export const faqs = [
   {
-    question: "What types of spaces do you clean?",
+    question: "What types of cleaning do you offer?",
     answer:
-      "Domenica cleans houses, apartments, and camper or RV interiors. Share the kind of space you have when requesting a quote.",
+      "Belieu's offers regular house cleaning, deep cleaning, move-in and move-out cleaning, Airbnb and short-term rental cleaning, construction cleaning, one-time cleaning, and commercial cleaning and resets.",
   },
   {
     question: "Do you offer recurring cleaning?",
     answer:
-      "Yes. Regular house and apartment cleaning can be scheduled at a frequency that works for both you and Domenica.",
+      "Yes. Weekly, biweekly, and monthly cleaning are available, along with one-time cleans. Call or text to discuss the schedule that fits your home.",
   },
   {
-    question: "Do you provide deep cleaning?",
+    question: "Do you handle move-in and move-out cleans?",
     answer:
-      "Yes. Deep cleaning is available for spaces that need extra attention, a seasonal reset, or a more thorough refresh.",
+      "Yes. Belieu's provides cleaning for homes in transition, whether you are preparing to move in, finishing a move out, or getting a space ready for its next occupant.",
   },
   {
-    question: "Do you offer move-in and move-out cleaning?",
+    question: "Do you clean Airbnb and short-term rentals?",
     answer:
-      "Yes. Domenica can clean empty or transitioning homes and apartments before a move, after a move, or between occupants.",
+      "Yes. Short-term rental cleaning is available to help reset the space between guests. Contact Belieu's to discuss your property and turnaround needs.",
   },
   {
-    question: "Do you clean campers and RVs?",
+    question: "Do you provide commercial cleaning?",
     answer:
-      "Yes. Camper and RV interior cleaning can help prepare the space for travel, guests, storage, or a new season.",
+      "Yes. Belieu's offers commercial cleaning and resets. Because every space is different, the scope is discussed before a quote is prepared.",
   },
   {
-    question: "Do I need to provide cleaning supplies?",
+    question: "Can you help with organizing or junk removal?",
     answer:
-      "Cleaning supplies, product preferences, and specific arrangements can be discussed when requesting your quote.",
+      "Yes. Decluttering, organizing, and junk removal are among the additional ways Belieu's can help. Share what needs to be handled when you call or text.",
   },
   {
-    question: "How is pricing determined?",
+    question: "Do you offer one-time cleaning?",
     answer:
-      "Pricing depends on the type and size of the space, its current condition, requested tasks, and cleaning frequency. Domenica reviews those details before confirming a personalized quote.",
+      "Yes. One-time cleaning is available for customers who need a single reset without setting up recurring service.",
   },
   {
-    question: "Do I need to be home during the cleaning?",
-    answer:
-      "Access and arrival arrangements can be discussed when scheduling so you can choose what works for your space.",
+    question: "How do I get a quote?",
+    answer: `Call or text ${siteConfig.contact.phone}, email ${siteConfig.contact.email}, or use the quote form to share the type of space and what you need help with.`,
   },
   {
-    question: "Can I request specific rooms or tasks?",
-    answer:
-      "Yes. Tell Domenica which rooms and tasks matter most so she can review them as part of your quote.",
+    question: "Are you insured?",
+    answer: "Yes. Belieu's Signature Cleaning Services is insured.",
   },
   {
-    question: "How do I request a quote?",
+    question: "What areas do you serve?",
     answer:
-      "Use the quote form to share a few details about your space, or call or message Domenica directly at 815-714-1432.",
+      "Belieu's serves the Des Moines metro and surrounding Central Iowa communities. Contact the business directly to confirm availability for your location.",
   },
 ] as const;

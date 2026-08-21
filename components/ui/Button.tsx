@@ -24,9 +24,9 @@ const Button = ({
 
   const variantClasses = {
     primary:
-      "border-(--navy) bg-(--navy) text-(--text-on-dark) shadow-[0_8px_20px_rgba(11,53,88,0.16)] hover:-translate-y-0.5 hover:border-(--navy-deep) hover:bg-(--navy-deep) hover:text-(--text-on-dark)",
+      "border-(--pink) bg-(--pink) text-white shadow-[0_8px_24px_rgba(219,31,105,0.28)] hover:-translate-y-0.5 hover:border-(--pink-dark) hover:bg-(--pink-dark) hover:text-white",
     secondary:
-      "border-(--blue) bg-white text-(--navy) hover:-translate-y-0.5 hover:border-(--navy) hover:bg-(--surface-soft) hover:text-(--navy-deep)",
+      "border-(--ink) bg-white text-(--ink) hover:-translate-y-0.5 hover:border-(--pink) hover:bg-(--pink-soft) hover:text-(--pink-dark)",
     dark:
       "border-(--subtle-on-dark) bg-transparent text-(--text-on-dark) hover:border-(--text-on-dark) hover:bg-white hover:text-(--navy)",
     light:

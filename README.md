@@ -1,8 +1,9 @@
-# Domenica’s Cleaning
+# Belieu's Signature Cleaning Services
 
-A responsive local-service website for Domenica’s Cleaning in Wisconsin. The
-site presents owner-led cleaning for houses, apartments, moves, deep cleans,
-campers, and RVs with a clear path to request a personalized quote.
+A responsive website demo for an owner-operated cleaning business serving the
+Des Moines metro and surrounding Central Iowa communities. The site presents
+residential and commercial cleaning, recurring options, and additional help
+with a strong judgment-free, fresh-start message.
 
 ## Local development
 
@@ -20,8 +21,8 @@ npm run build
 
 ## Launch details still needed
 
-- A genuine owner portrait and, ideally, an authentic photo of Domenica at work
-- Confirmed business email
-- Confirmed Wisconsin city and service radius or community list
-- Cleaning-supply, access, preparation, and scheduling policies
 - A connected form-delivery service or backend endpoint
+- The final production domain for canonical and social metadata
+- A verified Facebook profile URL if social links should be added
+- Any exact city-by-city service boundaries
+- Policies for supplies, access, scheduling, payment, and cancellations

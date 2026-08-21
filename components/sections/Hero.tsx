@@ -1,98 +1,74 @@
-"use client";
-
 import Image from "next/image";
-import Link from "next/link";
-import LeadModal from "@/components/layout/LeadModal";
-import useLeadModal from "@/components/layout/useLeadModal";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
-import { HomeIcon, MessageIcon, SparkleIcon } from "@/components/ui/Icons";
-import { primaryCta, siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/site";
 
-const Hero = () => {
-  const modal = useLeadModal();
+const Hero = () => (
+  <section className="relative overflow-hidden bg-(--ink) pb-8 pt-12 text-white sm:pb-10 sm:pt-16 lg:pt-20">
+    <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-(--gold) to-transparent opacity-60" />
+    <Container className="relative">
+      <div className="mx-auto max-w-5xl text-center">
+        <p className="flex items-center justify-center gap-3 text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-white/70 sm:text-xs sm:tracking-[0.2em]">
+          <span aria-hidden="true" className="hidden h-px w-8 bg-(--gold) sm:block" />
+          Des Moines metro cleaning
+          <span aria-hidden="true" className="hidden h-px w-8 bg-(--gold) sm:block" />
+        </p>
+        <h1 className="mt-6 font-display text-[clamp(3.6rem,13vw,8.6rem)] font-medium leading-[0.82] tracking-[-0.055em]">
+          Come home
+          <span className="block italic text-(--pink)">to clean.</span>
+        </h1>
+        <p className="mx-auto mt-7 max-w-2xl text-base leading-7 text-white/72 sm:text-lg sm:leading-8">
+          Reliable residential and commercial cleaning with a personal touch. Tell us what feels overwhelming, and we&apos;ll help you get your fresh start.
+        </p>
+        <p className="mt-5 font-display text-xl italic text-white sm:text-2xl">
+          No judgment. Just a clean, fresh start.
+        </p>
+        <div className="mt-8 flex flex-col justify-center gap-3 min-[430px]:flex-row">
+          <Button href={siteConfig.contact.phoneHref} className="min-[430px]:min-w-56">
+            Call / Text {siteConfig.contact.phone}
+          </Button>
+          <Button href="/#services" variant="dark" className="min-[430px]:min-w-40">
+            Explore Services
+          </Button>
+        </div>
+        <ul className="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-bold uppercase tracking-[0.12em] text-white/62 sm:text-sm">
+          <li>Local</li>
+          <li aria-hidden="true" className="text-(--gold)">•</li>
+          <li>Insured</li>
+          <li aria-hidden="true" className="text-(--gold)">•</li>
+          <li>Reliable</li>
+          <li aria-hidden="true" className="text-(--gold)">•</li>
+          <li>Detailed</li>
+        </ul>
+      </div>
 
-  return (
-    <section className="relative overflow-hidden bg-(--background) pb-12 pt-7 sm:pb-20 sm:pt-12 lg:pb-24 lg:pt-16">
-      <div aria-hidden="true" className="absolute -right-32 -top-32 size-96 rounded-full bg-(--blue-light)/45 blur-3xl" />
-      <Container className="relative">
-        <div className="grid items-center gap-9 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
-          <div className="max-w-2xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-(--border) bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.14em] text-(--navy)">
-              <SparkleIcon className="size-4 text-(--blue)" />
-              Locally owned &amp; operated
+      <div className="relative mt-11 sm:mt-14">
+        <div className="relative aspect-[5/4] overflow-hidden rounded-t-[8rem] border border-white/15 bg-(--ink-soft) sm:aspect-[16/8] sm:rounded-t-[14rem] lg:aspect-[16/6.4]">
+          <Image
+            src="/livingroom.jpg"
+            alt="A freshly cleaned and carefully arranged living room"
+            fill
+            preload
+            className="object-cover object-center"
+            sizes="(max-width: 1280px) calc(100vw - 2rem), 1200px"
+          />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/8" />
+          <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4 sm:inset-x-7 sm:bottom-7">
+            <div className="rounded-sm bg-white/94 px-4 py-3 text-left text-(--ink) shadow-lg backdrop-blur-sm sm:px-5">
+              <p className="text-[0.65rem] font-extrabold uppercase tracking-[0.17em] text-(--pink)">New client offer</p>
+              <p className="mt-1 font-display text-xl font-semibold sm:text-2xl">25% off your first clean</p>
             </div>
-            <h1 className="font-heading text-[clamp(2.65rem,12vw,5.75rem)] font-bold leading-[0.96] tracking-[-0.04em] text-(--navy)">
-              Clean Homes.
-              <span className="mt-2 block text-(--blue)">Happy Homes.</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-7 text-(--muted) sm:mt-7 sm:text-xl sm:leading-9">
-              Detail-oriented cleaning for houses, apartments, move-ins,
-              move-outs, deep cleans, and campers or RVs.
-            </p>
-            <div className="mt-6 flex max-w-xl items-start gap-3 rounded-2xl border border-(--border) bg-white p-4 text-sm leading-6 text-(--foreground) shadow-(--shadow-sm)">
-              <MessageIcon className="mt-0.5 size-5 shrink-0 text-(--blue)" />
-              <p>
-                Personal service and direct communication with Domenica.
-              </p>
+            <div className="hidden items-center gap-3 rounded-full border border-white/20 bg-black/55 p-2 pr-5 backdrop-blur-sm sm:flex">
+              <span className="relative size-12 overflow-hidden rounded-full border-2 border-white/80">
+                <Image src="/owner.jpg" alt="Owner of Belieu's Signature Cleaning Services" fill className="object-cover" sizes="48px" />
+              </span>
+              <p className="max-w-40 text-left text-xs font-bold leading-5 text-white">Owner-operated care from a real local business</p>
             </div>
-            <div className="mt-7 flex flex-col gap-3 min-[430px]:flex-row [&>*]:w-full min-[430px]:[&>*]:w-auto">
-              <Button onClick={() => modal.openModal(primaryCta.modal)}>
-                Request a Quote
-              </Button>
-              <Button href={siteConfig.contact.smsHref} variant="secondary">
-                Message Domenica
-              </Button>
-            </div>
-            <Link
-              href="/services"
-              className="mt-5 inline-flex min-h-11 items-center font-heading text-sm font-extrabold text-(--navy) underline decoration-(--blue) decoration-2 underline-offset-4 transition hover:text-(--blue)"
-            >
-              View Cleaning Services
-            </Link>
-          </div>
-
-          <div className="relative mx-auto w-full max-w-2xl lg:mx-0">
-            <div className="relative aspect-[4/4.5] overflow-hidden rounded-[1.5rem] border-4 border-white bg-(--surface-soft) shadow-(--shadow-lg) sm:aspect-[4/3] sm:rounded-[2rem] sm:border-8 lg:aspect-[4/4.35]">
-              <Image
-                src="/domenicas-cleaning-hero.png"
-                alt="Independent home cleaner carefully wiping a kitchen counter"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1023px) calc(100vw - 2.5rem), 580px"
-                preload
-              />
-              <div className="absolute inset-x-3 bottom-3 rounded-xl bg-white p-3 text-(--foreground) shadow-lg sm:inset-x-auto sm:bottom-6 sm:left-6 sm:max-w-xs sm:rounded-2xl sm:p-4">
-                <div className="flex items-center gap-3">
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-(--surface-blue) text-(--blue)">
-                    <HomeIcon className="size-5" />
-                  </span>
-                  <p className="text-sm font-semibold leading-5 text-(--navy)">
-                    Thoughtful care for the spaces you live in.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <p className="mt-3 text-xs leading-5 text-(--muted)">
-              Lifestyle image. Replace with an authentic photo of Domenica at
-              work when available.
-            </p>
           </div>
         </div>
-      </Container>
-
-      {modal.activeModal && (
-        <LeadModal
-          activeModal={modal.activeModal}
-          hasSubmitted={modal.hasSubmitted}
-          isSubmitting={modal.isSubmitting}
-          onClose={modal.closeModal}
-          onSubmit={modal.handleFormSubmit}
-          submitError={modal.submitError}
-        />
-      )}
-    </section>
-  );
-};
+      </div>
+    </Container>
+  </section>
+);
 
 export default Hero;

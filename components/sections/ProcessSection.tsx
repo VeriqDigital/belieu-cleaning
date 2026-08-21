@@ -1,47 +1,38 @@
-import { CalendarIcon, MessageIcon, SparkleIcon } from "@/components/ui/Icons";
-
 const steps = [
   {
-    title: "Tell Domenica About Your Space",
-    description: "Send basic details, photos, and what you would like cleaned.",
-    Icon: MessageIcon,
+    title: "Tell Us What You Need",
+    description: "Call, text, or send the basics about your space and the kind of help you are looking for.",
   },
   {
-    title: "Receive a Personalized Quote",
-    description: "Domenica reviews the scope and confirms pricing and availability.",
-    Icon: CalendarIcon,
+    title: "Get Your Personalized Plan",
+    description: "We will talk through the scope, timing, and priorities before confirming your quote.",
   },
   {
-    title: "Relax While It Gets Handled",
-    description: "Your space receives thoughtful, detail-oriented care.",
-    Icon: SparkleIcon,
+    title: "Come Home to Clean",
+    description: "We handle the work with care, so you can breathe easier in a space that feels fresh again.",
   },
 ] as const;
 
 const ProcessSection = () => (
-  <div>
-    <div className="mx-auto max-w-3xl text-center">
-      <p className="eyebrow">How it works</p>
-      <h2 className="mt-4 font-heading text-[clamp(2.15rem,10vw,4.35rem)] font-bold leading-[1.03] tracking-[-0.035em] text-(--navy)">
-        A Simple, Personal Process
-      </h2>
-      <p className="mx-auto mt-5 max-w-2xl leading-7 text-(--muted)">
-        Clear communication from the first message makes it easier to plan the
-        right care for your space.
+  <div className="text-white">
+    <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+      <div>
+        <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-(--gold)">How it works</p>
+        <h2 className="mt-4 font-display text-[clamp(2.8rem,8vw,6rem)] font-medium leading-[0.92] tracking-[-0.045em]">
+          Simple from the first <span className="italic text-(--pink)">hello.</span>
+        </h2>
+      </div>
+      <p className="max-w-2xl text-lg leading-8 text-white/65 lg:justify-self-end">
+        There is no complicated booking system or one-size-fits-all checklist. Start with a conversation about what would make the biggest difference.
       </p>
     </div>
 
-    <ol className="relative mt-9 grid gap-4 sm:mt-12 sm:gap-5 lg:grid-cols-3">
-      {steps.map(({ title, description, Icon }, index) => (
-        <li key={title} className="relative rounded-[1.25rem] border border-(--border) bg-white p-5 shadow-(--shadow-sm) sm:rounded-[1.5rem] sm:p-7">
-          <div className="flex items-center justify-between">
-            <span className="flex size-12 items-center justify-center rounded-full bg-(--surface-blue) text-(--blue)">
-              <Icon className="size-6" />
-            </span>
-            <span className="font-heading text-sm font-extrabold tracking-[0.16em] text-(--blue)">0{index + 1}</span>
-          </div>
-          <h3 className="mt-6 font-heading text-xl font-bold leading-tight text-(--navy) sm:mt-7 sm:text-2xl">{title}</h3>
-          <p className="mt-4 leading-7 text-(--muted)">{description}</p>
+    <ol className="mt-12 border-t border-white/15">
+      {steps.map((step, index) => (
+        <li key={step.title} className="grid gap-4 border-b border-white/15 py-7 sm:grid-cols-[5rem_0.8fr_1.2fr] sm:items-center sm:gap-6 sm:py-9">
+          <span className="font-display text-3xl italic text-(--pink)">0{index + 1}</span>
+          <h3 className="font-display text-2xl font-semibold sm:text-3xl">{step.title}</h3>
+          <p className="max-w-xl leading-7 text-white/60">{step.description}</p>
         </li>
       ))}
     </ol>
